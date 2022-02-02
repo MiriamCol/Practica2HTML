@@ -1,0 +1,48 @@
+<!--
+	Practica 2 Miriam Colino
+	Pagina secundaria Registrarse
+-->
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	  <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+</head>
+
+<body style="background-color:#ffc45b;">
+	<img src="logo-repsol-removebg-preview.png" width="25%" height="25%" align="left"> <br> <br>
+
+	<h1><center>Registrarse</center></h1>
+
+	  <a href="Practica2.html" class="btn btn-info btn-lg">
+	     <span class="glyphicon glyphicon-home"></span> Home 
+	  </a>
+	  <br><br>
+
+<div>
+	<div style="margin-left:7%; margin-right:7%;">
+	<form action="/signup" method="post">
+		<label for="fname">Nombre:</label>
+		<input type="text" id="fname" name="fname"><br><br>
+		<label for="lname">Primer apellido:</label>
+		<input type="text" id="lname" name="lname"><br><br>
+		<label for="lname">Segundo apellido:</label>
+		<input type="text" id="lname" name="lname"><br><br>
+		<label for="tidentification">Tipo de identificador:</label>
+		<select name="select">
+		<option value="value1">NIF</option>
+		<option value="value2" selected="">DNI</option>
+		<option value="value3">NIE</option>
+		</select><br><br>
+		<label for="identification">Identificación:</label>
+		<input type="text" id="identification" name="identification"><br><br>
+		<label for="identification">Elija contraseña:</label>
+		<input type="password" id="identification" name="identification">
+		<button type="submit">Submit</button>
+	</form>
+</div>
+
+</body>
+</html>
+	
