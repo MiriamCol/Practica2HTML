@@ -1,3 +1,5 @@
+//JAVASCRIPT PARA EL INICIO DE SESION
+
 // show a message with a type of the input
 function showMessage(input, message, type) {
 	// get the small element and set the message
@@ -23,6 +25,18 @@ function hasValue(input, message) {
 	return showSuccess(input);
 }
 
+function validatePassword(input, requiredMsg, invalidMsg) {
+	// check if the value is not empty
+	if (!hasValue(input, requiredMsg)) {
+		showError(input, invalidMsg);
+	}
+	else
+	{
+	return true;
+	}
+
+}
+
 function validateEmail(input, requiredMsg, invalidMsg) {
 	// check if the value is not empty
 	if (!hasValue(input, requiredMsg)) {
@@ -41,9 +55,10 @@ function validateEmail(input, requiredMsg, invalidMsg) {
 
 const form = document.querySelector("#signup");
 
-const NAME_REQUIRED = "Please enter your name";
-const EMAIL_REQUIRED = "Please enter your email";
-const EMAIL_INVALID = "Please enter a correct email address format";
+const EMAIL_REQUIRED = "Por favor, introduzca su correo electrónico";
+const PASSWORD_REQUIRED = "Por favor, introduzca la contraseña";
+const PASSWORD_INVALID = "La contraseña es: hola";
+const PASSWORD_REQUERIDO= "hola"
 
 form.addEventListener("submit", function (event) {
 	// stop form submission
@@ -51,11 +66,13 @@ form.addEventListener("submit", function (event) {
 
 
 	// validate the form
-	let nameValid = hasValue(form.elements["fname"], NAME_REQUIRED);
-	let emailValid = hasValue(form.elements["lname"], EMAIL_REQUIRED);
+	let emailValid = hasValue(form.elements["fname"], EMAIL_REQUIRED);
+	let passwordValid= hasValue(form.elements["lname"], PASSWORD_REQUIRED);
+	let validatePasswordd = validatePassword(form.elements["lname"], PASSWORD_REQUERIDO, PASSWORD_INVALID);
 	// if valid, submit the form.
-	if (nameValid && emailValid) {
-		alert("El email introducido es:" + form.elements["fname"].value + "La contraseña que se ha introducido es:" + form.elements["lname"].value);
+	if (emailValid && passwordValid &&validatePasswordd) {
+
+		alert("El email introducido es: " + form.elements["fname"].value + "\nLa contraseña que se ha introducido es: " + form.elements["lname"].value);
 	}
 
 });
