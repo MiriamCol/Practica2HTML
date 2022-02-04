@@ -23,19 +23,26 @@
 	<h1><br><center>Inicio de sesión</center></h1>
 
   <br><br>
-  <div>
   	<div style="background-color:#ffc45b;margin-left:7%; margin-right:7%;">
-  
-	<form action="/signup" method="post">
-	<label for="fname">Correo electrónico o usuario:</label>
-	<input type="text" id="fname" name="fname"><br><br>
-	<label for="lname">Contraseña:</label>
-	<input type="password" id="lname" name="lname"><br><br>
-	<button type="submit">Submit</button>
-</form>
-</div>
-  </div>
+  <form action="signup.html" method="post" id="signup">
 
+	<div class="field">
+	<label for="fname">Correo electrónico:</label>
+	<input type="text" id="fname" name="fname"><br><br>
+   <small></small>
+	</div>
+
+	  <div class>
+	  <label for="lname">Contraseña:</label>
+	<input type="password" id="lname" name="lname"><br><br>
+	  <small></small>
+	  </div>
+
+	<button type="submit">Submit</button>
+
+	</form>
+		<script src="app.js"></script>
+</div>
 
 
 
