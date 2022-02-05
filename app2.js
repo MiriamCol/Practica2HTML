@@ -1,4 +1,5 @@
-//JAVASCRIPT PARA EL INICIO DE SESION
+//JAVASCRIPT PARA EL INICIO DE SESION.
+//importante: El email se introduce el que el usuario quiera y la contraseña es: contraseña
 
 // show a message with a type of the input
 function showMessage(input, message, type) {
@@ -36,7 +37,7 @@ function validatePassword(input, requiredMsg, invalidMsg) {
 }
 
 
-function validateEmail(input, requiredMsg, invalidMsg, invalidMsg2) {
+function validateEmail(input, invalidMsg) {
 
    // validate email format
    const emailRegex =
@@ -44,7 +45,7 @@ function validateEmail(input, requiredMsg, invalidMsg, invalidMsg2) {
 
    const email = input.value.trim();
    if (!emailRegex.test(email)) {
-      return showError(input, invalidMsg2);
+      return showError(input, invalidMsg);
    }
    return true;
 }
@@ -53,7 +54,7 @@ function validateEmail(input, requiredMsg, invalidMsg, invalidMsg2) {
 const form = document.querySelector("#signup");
 
 const MENSAJE_EMAIL_VACIO = "Por favor, introduzca su correo electrónico";
-const MENSAJE_EMAIL_VALIDO="Por favor, introduzca un email válido"
+const MENSAJE_EMAIL_INVALIDO="Por favor, introduzca un email válido"
 const MENSAJE_CONTRASENA_VACIA= "Por favor, introduzca la contraseña";
 const CONTRASENA_REQUERIDA= "contraseña";
 const MENSAJE_CONTRASENA_INCORRECTA= "Contraseña incorrecta, la correcta es: contraseña"
@@ -67,6 +68,7 @@ form.addEventListener("submit", function (event) {
    let emailValid = hasValue(form.elements["fname"], MENSAJE_EMAIL_VACIO);
    let passwordValid= hasValue(form.elements["lname"], MENSAJE_CONTRASENA_VACIA);
    let validatePasswordd = validatePassword(form.elements["lname"], CONTRASENA_REQUERIDA, MENSAJE_CONTRASENA_INCORRECTA);
+   //let validateEmaill=validateEmail(form.elements["lname"],MENSAJE_EMAIL_INVALIDO,)
    // if valid, submit the form.
 
    if (emailValid && passwordValid && validatePasswordd)
