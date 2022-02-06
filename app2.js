@@ -74,7 +74,7 @@ form.addEventListener("submit", function (event) {
    if (emailValid && passwordValid && validatePasswordd)
    {
 
-      alert("El email introducido es: " + form.elements["fname"].value + "\nLa contraseña que se ha introducido correctamente es: " + form.elements["lname"].value);
+      alert("El email introducido es: " + form.elements["fname"].value + "\nLa contraseña que se ha introducido correctamente es: " + form.elements["lname"].value+ "\nSe ha iniciado sesión correctamente");
 
    }
 
